@@ -1,5 +1,6 @@
 
 mod deck;
+pub mod game;
 
 pub struct Player {
 

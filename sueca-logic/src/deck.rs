@@ -3,7 +3,7 @@ use strum::IntoEnumIterator;
 use strum_macros::EnumIter;
 
 #[derive(EnumIter, Clone, Copy, Debug, PartialEq, Eq)]
-enum Suit {
+pub enum Suit {
     Club,
     Heart,
     Diamond,
@@ -11,7 +11,7 @@ enum Suit {
 }
 
 #[derive(PartialEq, Eq, PartialOrd, Ord, EnumIter, Debug, Clone, Copy)]
-enum Symbol {
+pub enum Symbol {
     Two,
     Three,
     Four,
@@ -26,8 +26,8 @@ enum Symbol {
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub struct Card {
-    suit: Suit,
-    symbol: Symbol,
+    pub suit: Suit,
+    pub symbol: Symbol,
 }
 
 #[derive(Debug)]
