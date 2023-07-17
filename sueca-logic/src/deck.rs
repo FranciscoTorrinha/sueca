@@ -30,6 +30,19 @@ pub struct Card {
     pub symbol: Symbol,
 }
 
+impl Card {
+    pub fn points(&self) -> u32{
+        match self.symbol {
+            Symbol::Ace => 11,
+            Symbol::Seven => 10,
+            Symbol::King => 4,
+            Symbol::Knight => 3,
+            Symbol::Queen => 2,
+            _ => 0
+        }
+    }
+}
+
 #[derive(Debug)]
 pub struct Deck(Vec<Card>);
 
